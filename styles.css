@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Halant:wght@300;400;500;600&family=Montserrat&display=swap");
+html {
+  font-size: 62.5;
+  width: 100vw;
+  font-family: "Halant", serif;
+  /* font-family: 'Montserrat', sans-serif; */
+}
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
+/* Container-1 */
+.container-1 {
+  background-color: rgb(243, 243, 243);
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 4rem;
+}
+.intro {
+  padding-left: 2rem;
+  padding-top: 1.5rem;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+.my-name {
+  padding-bottom: 0;
+  margin-bottom: 0;
+  letter-spacing: 0.1rem;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+.intro-para {
+  padding-top: 0;
+  margin-top: 0;
+  font-size: 1.2rem;
+}
+.nav-list-item {
+  list-style: none;
+}
+.nav-link,
+.nav-list-item {
+  text-decoration: none;
+  margin-left: 1rem;
+  align-items: center;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: black;
+}
+.nav-list:last-child {
+  padding-right: 10rem;
+}
+i {
+  font-size: 1.5rem;
+}
+/* End of Container-1 */
+/* Container-2 */
+.container-2 {
+  height: 90vh;
+  display: grid;
+  grid-template-columns: 1rem 2fr 1fr;
+  grid-template-areas: ". breif-heading image-cont-2 ";
+  grid-gap: 4rem;
+  background-color: rgb(243, 243, 243);
+  overflow-x: hidden;
+}
+.breif-heading {
+  grid-area: breif-heading;
+  align-self: center;
+  font-weight: 300;
+  font-size: 4rem;
+}
+
+.image-cont-2 {
+  width: 80%;
+  height: 80%;
+  object-fit: cover;
+  grid-area: image-cont-2;
+}
+.cont-2-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+span {
+  font-weight: 500;
+  text-transform: capitalize;
+}
+.sp-3 {
+  background-color: yellow;
+  padding: 0 0.5rem 0 0.5rem;
+}
