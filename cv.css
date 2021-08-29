@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=Halant:wght@300;400;500;600&family=Montserrat&display=swap");
+*,
+html {
+  font-size: 62.5;
+  width: 100%;
+  font-family: "Halant", serif;
+  scroll-behavior: smooth;
+
+  /* font-family: "Montserrat", sans-serif; */
+}
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
+a {
+  text-decoration: none;
+}
+.arrow {
+  font-size: 3rem;
+  padding: 2rem;
+  margin-bottom: 0;
+  color: #ff206e;
+  transition: all 0.2s ease-in-out;
+}
+.arrow:hover {
+  color: #461220;
+}
+.top-bar {
+  background-color: #ff206e;
+  height: 2rem;
+  width: 70%;
+  left: 30%;
+  margin-top: 1rem;
+}
+.bar-line {
+  background-color: black;
+  height: 0.2rem;
+  width: 100vw;
+  transform: translateY(1rem);
+}
+.container {
+  margin: auto;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-evenly;
+}
+.image {
+  padding-top: 2rem;
+  width: 40%;
+  height: 70%;
+  float: left;
+  object-fit: cover;
+}
+
+.skills-paragraph {
+  width: 50%;
+  padding-top: 2rem;
+  font-size: 1.4rem;
+  font-weight: 300;
+}
+
+.skills-list-item {
+  width: 60%;
+  margin: auto;
+  padding: 0.3rem;
+}
+span {
+  font-weight: 700;
+  background-color: #ccc;
+  letter-spacing: 0.1rem;
+  margin-right: 0.5rem;
+  font-size: 1.5rem;
+}
+.paragraph-container-cv {
+  padding-top: 2rem;
+}
+.cv-list-item,
+.cv-h3,
+.cv-paragraph {
+  width: 70%;
+  margin: auto;
+  padding: 0.3rem;
+  letter-spacing: 0.1rem;
+  font-size: 1.2rem;
+}
+.cv-h3 {
+  font-size: 1.4rem;
+}
+.cv-paragraph {
+  margin-bottom: 2rem;
+}

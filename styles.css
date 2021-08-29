@@ -1,17 +1,25 @@
 @import url("https://fonts.googleapis.com/css2?family=Halant:wght@300;400;500;600&family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Acme&family=Crete+Round&family=Prata&display=swap");
 html {
   font-size: 62.5;
   width: 100vw;
   font-family: "Halant", serif;
+  scroll-behavior: smooth;
+
   /* font-family: 'Montserrat', sans-serif; */
 }
 body {
   margin: 0;
   overflow-x: hidden;
 }
-/* Container-1 */
-.container-1 {
-  background-color: rgb(243, 243, 243);
+a {
+  text-decoration: none;
+}
+/* Section-1 ------------------------------------------*/
+.section-1 {
+  width: 100%;
+  height: 20vh;
+  background-color: #ffe5ec;
   display: flex;
   justify-content: space-between;
   margin: 0;
@@ -21,11 +29,11 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 4rem;
+  margin-top: 3.5rem;
 }
 .intro {
   padding-left: 2rem;
-  padding-top: 1.5rem;
+  padding-top: 1rem;
   margin-bottom: 0;
   padding-bottom: 0;
 }
@@ -35,6 +43,7 @@ body {
   letter-spacing: 0.1rem;
   font-weight: 700;
   font-size: 1.5rem;
+  color: #ff206e;
 }
 .intro-para {
   padding-top: 0;
@@ -44,6 +53,7 @@ body {
 .nav-list-item {
   list-style: none;
 }
+
 .nav-link,
 .nav-list-item {
   text-decoration: none;
@@ -52,6 +62,7 @@ body {
   font-size: 1.2rem;
   font-weight: 500;
   color: black;
+  transition: all 0.3s ease;
 }
 .nav-list:last-child {
   padding-right: 10rem;
@@ -59,29 +70,59 @@ body {
 i {
   font-size: 1.5rem;
 }
-/* End of Container-1 */
-/* Container-2 */
-.container-2 {
-  height: 90vh;
-  display: grid;
-  grid-template-columns: 1rem 2fr 1fr;
-  grid-template-areas: ". breif-heading image-cont-2 ";
-  grid-gap: 4rem;
-  background-color: rgb(243, 243, 243);
-  overflow-x: hidden;
+.nav-link::after {
+  content: "";
+  width: 0;
+  height: 0.1rem;
+  background-color: #ff206e;
+  display: block;
+  transition: all 0.3s cubic-bezier(0.55, 0, 0.98, 0.54);
 }
+.nav-link:hover {
+  color: #ff206e;
+}
+.nav-link:hover::after {
+  width: 100%;
+}
+/* End of section-1 ---------------------------------------------*/
+/* Container-2 --------------------------------------------------*/
+.section-2 {
+  width: 100%;
+  height: 80vh;
+  display: grid;
+  grid-template-columns: 1rem 2fr 1fr 2rem;
+  grid-template-areas: ". breif-heading image-cont-2 .";
+  grid-gap: 4rem;
+  background-color: #ffe5ec;
+}
+
 .breif-heading {
   grid-area: breif-heading;
   align-self: center;
   font-weight: 300;
   font-size: 4rem;
+  opacity: 0;
+  visibility: hidden;
+  animation: fadeAnimation 1.5s 0.5s forwards;
+  animation-timing-function: cubic-bezier(0.49, 0.22, 0.52, 1.35);
+}
+
+@keyframes fadeAnimation {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+  }
 }
 
 .image-cont-2 {
-  width: 80%;
-  height: 80%;
-  object-fit: cover;
   grid-area: image-cont-2;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
 .cont-2-img {
   width: 100%;
@@ -93,6 +134,413 @@ span {
   text-transform: capitalize;
 }
 .sp-3 {
-  background-color: yellow;
+  background-color: #ff206e;
   padding: 0 0.5rem 0 0.5rem;
 }
+/* About me */
+.section-3 {
+  width: 100%;
+  height: 100vh;
+
+  padding-top: 1rem;
+}
+.about-me-bar {
+  width: 50%;
+  height: 6rem;
+  background-color: #ff206e;
+  margin-top: 6rem;
+}
+.about-me-heading,
+.projects-heading {
+  font-size: 5rem;
+  text-align: right;
+  padding-right: 3rem;
+  font-family: "Prata", serif;
+  font-weight: 300;
+  transform: translateY(-50%);
+  border-bottom: black solid 0.2rem;
+}
+.about-me-paragraph {
+  width: 50%;
+  margin: auto;
+  padding-top: 3rem;
+  padding-bottom: 5rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+  letter-spacing: 0.01rem;
+}
+.about-me-softskills {
+  margin-top: 0;
+  font-weight: 300;
+}
+.sp-sk {
+  font-weight: 500;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+.sp-clr {
+  font-weight: 300;
+  background-color: #ccc;
+}
+.about-me-btn {
+  border: #ff206e 0.1rem solid;
+  padding: 1rem 2rem 1rem 2rem;
+  font-family: "Montserrat", sans-serif;
+  font-size: medium;
+  cursor: pointer;
+  transition: all 0.5s;
+  color: #ff206e;
+  background-color: #fff;
+}
+.about-me-btn:hover {
+  color: #fff;
+  background-color: #ff206e;
+  border: #ff206e 0.1rem solid;
+}
+/* Skills */
+.section-4 {
+  width: 100%;
+  height: 100vh;
+
+  padding-top: 1rem;
+}
+.skills {
+  width: 50%;
+  margin-left: 50%;
+  height: 6rem;
+  background-color: #ff206e;
+
+  z-index: 10;
+}
+.skills-heading {
+  text-align: left;
+  padding-left: 3rem;
+  transform: translateY(-50%);
+  font-size: 5rem;
+  font-weight: 400;
+  font-family: "Prata", serif;
+  border-bottom: black solid 0.2rem;
+}
+.skills-container {
+  width: 40%;
+  margin: auto;
+  background-color: #ffe0e9;
+  transform: translateY(-5%);
+  padding: 5rem 3rem 4rem 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 2rem;
+  background-color: #f2f4f3;
+  border-radius: 0.3rem;
+  box-shadow: 0.05rem 0.05rem 0.025rem #555;
+  position: relative;
+  margin-bottom: 1rem;
+  position: relative;
+}
+.progress-text {
+  position: absolute;
+  font-size: 1rem;
+  transform: translateY(-50%);
+  color: #fff;
+}
+.progress-text span {
+  margin: 0.5rem;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+.progress-percent {
+  height: 100%;
+  background: linear-gradient(to right, #602437, #ff9ebb);
+  border-radius: 0.3rem;
+  margin-bottom: 1rem;
+}
+
+/* Keyframes */
+@keyframes slideInFromLeft-1 {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 99%;
+  }
+}
+@keyframes slideInFromLeft-2 {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 95%;
+  }
+}
+@keyframes slideInFromLeft-3 {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 90%;
+  }
+}
+@keyframes slideInFromLeft-4 {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 80%;
+  }
+}
+@keyframes slideInFromLeft-5 {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 75%;
+  }
+}
+@keyframes slideInFromLeft-6 {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 70%;
+  }
+}
+/* End of keyframes */
+.icon-img {
+  width: 2rem;
+  height: 2rem;
+  padding-right: 1rem;
+  position: relative;
+  transform: translateX(-100%);
+}
+.html-img {
+  float: left;
+}
+
+.__html {
+  width: 99%;
+  animation: 1s ease-out 0s 1 slideInFromLeft-1;
+}
+
+.__css {
+  width: 95%;
+  animation: 1s ease-out 0s 1 slideInFromLeft-2;
+}
+.__javascript {
+  width: 90%;
+  animation: 1s ease-out 0s 1 slideInFromLeft-3;
+}
+.__react {
+  width: 80%;
+  animation: 1s ease-out 0s 1 slideInFromLeft-4;
+}
+.__node {
+  width: 75%;
+  animation: 1s ease-out 0s 1 slideInFromLeft-5;
+}
+
+.__mongo {
+  width: 70%;
+  animation: 1s ease-out 0s 1 slideInFromLeft-6;
+}
+.skills-btn {
+  width: 8rem;
+  border: #ff206e 0.1rem solid;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.5s;
+  color: #ff206e;
+  background-color: #ffe0e9;
+  margin-top: 1rem;
+  margin-bottom: 0;
+  position: absolute;
+  right: 3rem;
+  bottom: 1rem;
+}
+.skills-btn:hover {
+  color: #ffe0e9;
+  background-color: #ff206e;
+  border: #ff206e 0.1rem solid;
+}
+/* Progress bars end */
+
+/* End of skills */
+/* Projects */
+.section-5 {
+  width: 100%;
+  height: 100vh;
+  padding-top: 2rem;
+}
+
+.projects {
+  width: 50%;
+  right: 50%;
+  height: 6rem;
+  background-color: #ff206e;
+}
+.projects-heading {
+  font-family: "Prata", serif;
+  transform: translateY(-50%);
+  border-bottom: black solid 0.2rem;
+}
+.projects-container {
+  width: 90%;
+  padding: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #461220;
+  transform: translateY(-5%);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-gap: 4rem;
+}
+
+.project-link {
+  margin: auto;
+}
+.project-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.5s;
+  position: relative;
+}
+.project-img-4 {
+  background-color: #fff;
+  cursor: progress;
+}
+.project-link {
+  position: relative;
+  cursor: pointer;
+  height: 100%;
+  transition: all 0.3s ease-in-out;
+}
+.project-link:hover .project-img {
+  transform: scale(1.1);
+  filter: blur(0.5rem);
+  opacity: 0.5;
+}
+
+.project-name {
+  position: absolute;
+  left: 0.5%;
+  top: 0.5%;
+  width: 100%;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  color: #ff206e;
+  border-bottom: none;
+  width: 0;
+  overflow: hidden;
+  transition: width 0.3s;
+}
+.project-paragraph {
+  position: absolute;
+  left: 1rem;
+  top: 4rem;
+  width: 100%;
+  font-size: 1rem;
+  letter-spacing: 0.05rem;
+  opacity: 0;
+  visibility: hidden;
+  color: #ffe5ec;
+  transition: opacity 0.3s;
+}
+
+/* .project-link::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0.1rem;
+  top: 22%;
+  background-color: #ffe5ec;
+  transition: width 0.5s;
+} */
+
+/* .project-link:hover::after {
+  width: 100%;
+} */
+.project-link:hover .project-name {
+  width: 100%;
+  transition: width 1s 0.5s;
+}
+.project-link:hover .project-paragraph {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 1s 1s;
+}
+/* End of Projects */
+/* Footer */
+.section-6 {
+  background-color: #ffe5ec;
+  height: 40vh;
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 4rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+form {
+  display: flex;
+  flex-direction: column;
+}
+h3 {
+  font-size: 1.5rem;
+  font-family: "Prata", serif;
+  color: #ff206e;
+  border-bottom: #ff206e 0.1rem solid;
+}
+
+.quick-links-link,
+.contact-me-link,
+.address-paragraph,
+.phn-no {
+  color: #461220;
+  font-size: 1.2rem;
+  letter-spacing: 0.1rem;
+  padding: 0.2rem;
+  transition: all 0.2s cubic-bezier(0.55, 0, 0.98, 0.54);
+}
+
+.quick-links-link:hover,
+.contact-me-link:hover {
+  color: #ff206e;
+}
+
+input,
+textarea,
+.form-btn {
+  border: none;
+  margin: 0.2rem;
+  padding: 0.3rem;
+  outline: #461220 0.1rem solid;
+  color: #461220;
+  font-family: "Prata", serif;
+}
+.form-btn {
+  cursor: pointer;
+  font-size: 1rem;
+  letter-spacing: 0.1rem;
+  background-color: #ffe5ec;
+  transition: all 0.5s ease-in-out;
+}
+.form-btn:hover {
+  background-color: #461220;
+  color: #ffe5ec;
+}
+.last-line {
+  background-color: #461220;
+  color: #ffe5ec;
+  text-align: center;
+  font-size: 1rem;
+  letter-spacing: 0.1rem;
+  padding: 0.5rem;
+}
+/* End of Section-6 */
