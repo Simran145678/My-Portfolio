@@ -90,7 +90,7 @@ i {
   width: 100%;
   height: 80vh;
   display: grid;
-  grid-template-columns: 1rem 2fr 1fr 2rem;
+  grid-template-columns: 1rem 2fr 1.2fr 2rem;
   grid-template-areas: ". breif-heading image-cont-2 .";
   grid-gap: 4rem;
   background-color: #ffe5ec;
@@ -128,6 +128,7 @@ i {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
 }
 span {
   font-weight: 500;
