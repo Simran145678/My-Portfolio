@@ -46,23 +46,31 @@ a {
 }
 .image {
   padding-top: 2rem;
-  width: 40%;
-  height: 70%;
+  width: 30%;
+  height: 80%;
   float: left;
   object-fit: cover;
 }
 
 .skills-paragraph {
-  width: 50%;
+  width: 100%;
   padding-top: 2rem;
   font-size: 1.4rem;
   font-weight: 300;
 }
-
+.cv-list {
+  list-style-type: none;
+  padding-bottom: 4rem;
+}
 .skills-list-item {
-  width: 60%;
+  width: 50%;
   margin: auto;
   padding: 0.3rem;
+}
+.cv-list-item-bold {
+  background-color: #fff;
+  font-weight: 500;
+  font-size: 1.4rem;
 }
 span {
   font-weight: 700;
@@ -82,10 +90,23 @@ span {
   padding: 0.3rem;
   letter-spacing: 0.1rem;
   font-size: 1.2rem;
+  text-align: center;
 }
 .cv-h3 {
-  font-size: 1.4rem;
+  padding-top: 3rem;
+  font-size: 1.5rem;
+}
+.cv-list-item {
+  width: 100%;
 }
 .cv-paragraph {
   margin-bottom: 2rem;
+}
+.last-line {
+  background-color: #461220;
+  color: #ffe5ec;
+  text-align: center;
+  font-size: 1rem;
+  letter-spacing: 0.1rem;
+  padding: 0.5rem;
 }

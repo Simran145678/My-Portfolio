@@ -163,15 +163,22 @@ span {
 .about-me-paragraph {
   width: 50%;
   margin: auto;
-  padding-top: 3rem;
+  padding-top: 2rem;
   padding-bottom: 5rem;
   font-size: 1.2rem;
   font-weight: 500;
   letter-spacing: 0.01rem;
+  text-indent: 5%;
+  margin-bottom: 0;
+}
+.about-me-paragraph-para {
+  margin: 0;
+  padding: 0;
 }
 .about-me-softskills {
   margin-top: 0;
   font-weight: 300;
+  text-indent: 0%;
 }
 .sp-sk {
   font-weight: 500;
