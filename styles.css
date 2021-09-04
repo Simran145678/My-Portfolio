@@ -772,6 +772,9 @@ textarea {
   .section-5 {
     height: 100%;
   }
+  .skills-container {
+    transform: translateY(-2%);
+  }
   .projects-container {
     transform: translateY(-2%);
     grid-gap: 0.5rem;
