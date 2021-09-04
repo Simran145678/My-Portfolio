@@ -152,4 +152,9 @@ span {
   .skills-list {
     width: 90%;
   }
+  .cv-list-item-bold {
+    background-color: #fff;
+    font-weight: 500;
+    font-size: 1.2rem;
+  }
 }
