@@ -45,8 +45,9 @@ a {
   justify-content: space-evenly;
 }
 .image {
-  width: 30%;
-  height: 80%;
+  margin-top: 4rem;
+  width: 45%;
+  height: 100%;
   float: left;
   object-fit: cover;
 }
@@ -79,17 +80,17 @@ span {
   font-size: 1.5rem;
 }
 .paragraph-container-cv {
-  padding-top: 2rem;
+  padding: 2rem;
 }
 .cv-list-item,
 .cv-h3,
 .cv-paragraph {
   width: 70%;
-  margin: auto;
+
   padding: 0.3rem;
   letter-spacing: 0.1rem;
   font-size: 1.2rem;
-  text-align: center;
+  text-align: left;
 }
 .cv-h3 {
   padding-top: 3rem;
@@ -108,4 +109,46 @@ span {
   font-size: 1rem;
   letter-spacing: 0.1rem;
   padding: 0.5rem;
+}
+
+/* Media Queries------------- */
+@media (max-width: 1050px) {
+  .paragraph-container-cv {
+    width: 100%;
+    padding: 1rem;
+  }
+  .cv-list-item,
+  .cv-h3,
+  .cv-paragraph {
+    width: 100%;
+  }
+  .skills-list-item,
+  .skills-paragraph,
+  .skills-list {
+    width: 90%;
+  }
+}
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+  }
+  .image {
+    align-self: center;
+  }
+  .paragraph-container-cv {
+    align-self: center;
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+  .cv-list-item,
+  .cv-h3,
+  .cv-paragraph {
+    letter-spacing: 0;
+    font-size: 1.1rem;
+  }
+  .skills-list-item,
+  .skills-paragraph,
+  .skills-list {
+    width: 90%;
+  }
 }

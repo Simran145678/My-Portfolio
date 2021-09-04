@@ -15,6 +15,11 @@ body {
 a {
   text-decoration: none;
 }
+.menu {
+  background-color: #602437;
+  width: 100%;
+  position: fixed;
+}
 /* Section-1 ------------------------------------------*/
 .section-1 {
   width: 100%;
@@ -89,11 +94,16 @@ i {
 .section-2 {
   width: 100%;
   height: 80vh;
-  display: grid;
+
+  display: flex;
+  align-content: space-between;
+  /* display: grid;
   grid-template-columns: 1rem 2fr 1.2fr 2rem;
-  grid-template-areas: ". breif-heading image-cont-2 .";
-  grid-gap: 4rem;
+
+  grid-gap: 4rem; */
   background-color: #ffe5ec;
+  align-items: center;
+  justify-content: center;
 }
 
 .breif-heading {
@@ -102,6 +112,8 @@ i {
   font-weight: 300;
   font-size: 4rem;
   opacity: 0;
+  padding-left: 2rem;
+  padding-right: 2rem;
   visibility: hidden;
   animation: fadeAnimation 1.5s 0.5s forwards;
   animation-timing-function: cubic-bezier(0.49, 0.22, 0.52, 1.35);
@@ -119,17 +131,27 @@ i {
 }
 
 .image-cont-2 {
-  grid-area: image-cont-2;
+  align-items: center;
   width: 100%;
   height: 100%;
+  background-image: url("images/DisplayPic\ .jpg");
+
   overflow: hidden;
-}
-.cont-2-img {
-  width: 100%;
-  height: 100%;
+  background-size: cover;
+  margin-right: 2rem;
+
+  background-repeat: no-repeat;
   object-fit: cover;
-  object-position: center;
 }
+/* .cont-2-img {
+  
+  float: center;
+  width: 50%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  object-fit: cover;
+} */
 span {
   font-weight: 500;
   text-transform: capitalize;
@@ -141,7 +163,7 @@ span {
 /* About me */
 .section-3 {
   width: 100%;
-  height: 100vh;
+  height: 100%;
 
   padding-top: 1rem;
 }
@@ -208,7 +230,7 @@ span {
 /* Skills */
 .section-4 {
   width: 100%;
-  height: 100vh;
+  height: 100%;
 
   padding-top: 1rem;
 }
@@ -382,7 +404,7 @@ span {
 /* Projects */
 .section-5 {
   width: 100%;
-  height: 100vh;
+  height: 100%;
   padding-top: 2rem;
 }
 
@@ -555,3 +577,205 @@ textarea {
   padding: 0.5rem;
 }
 /* End of Section-6 */
+/* Media Queries---------------------------------- */
+@media (max-width: 1250px) {
+  .breif-heading {
+    font-size: 3.5rem;
+    padding-right: 0;
+  }
+  .image-cont-2 {
+    width: 80%;
+    height: 80%;
+    margin-left: 0;
+    background-size: cover;
+  }
+
+  .about-me-paragraph {
+    width: 60%;
+  }
+  .skills-container {
+    width: 55%;
+  }
+}
+
+@media (max-width: 1050px) {
+  .nav-list:last-child {
+    padding-right: 5rem;
+    margin-left: 0.5rem;
+  }
+  .nav-link,
+  .nav-list-item {
+    margin-left: 0.7rem;
+  }
+  .image-cont-2 {
+    width: 70%;
+    height: 70%;
+  }
+}
+@media (max-width: 910px) {
+  .breif-heading {
+    font-size: 3rem;
+  }
+
+  .section-5,
+  .section-4 {
+    height: 100%;
+  }
+  .image-cont-2 {
+    width: 70%;
+    height: 60%;
+    margin-left: 0;
+    margin-right: 0.5rem;
+    background-size: cover;
+    position: center;
+  }
+  .about-me-paragraph {
+    width: 70%;
+  }
+  .skills-container {
+    width: 60%;
+  }
+  .section-1 {
+    flex-direction: column;
+  }
+  .breif-heading {
+    font-size: 2.5rem;
+    padding-right: 0.2rem;
+  }
+  .intro-para,
+  .my-name {
+    text-align: center;
+    margin-right: 2rem;
+  }
+  .nav-list {
+    margin-top: 2rem;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+  }
+  .quick-links-link,
+  .contact-me-link,
+  .address-paragraph,
+  .phn-no {
+    font-size: 1rem;
+  }
+  .section-6 {
+    height: 30vh;
+  }
+  input,
+  textarea,
+  .form-btn {
+    margin: 0.1rem;
+    padding: 0.1rem;
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 750px) {
+  .image-cont-2 {
+    width: 100%;
+  }
+  .section-6 {
+    height: 100%;
+    flex-direction: column;
+    padding-left: 1rem;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 0;
+  }
+  h3 {
+    margin-right: 5rem;
+    margin-bottom: 0;
+    margin-top: 0.2rem;
+  }
+  .quick-links-link,
+  .contact-me-link,
+  .address-paragraph,
+  .phn-no {
+    padding: 0.1rem;
+    letter-spacing: 0;
+  }
+  .quick-links-link,
+  .contact-me-link {
+    margin: 0;
+    padding: 0;
+  }
+  input,
+  textarea,
+  .form-btn {
+    margin-right: 4rem;
+    float: left;
+  }
+  input {
+    margin-top: 0.5rem;
+  }
+
+  textarea {
+    max-height: 3rem;
+  }
+}
+@media (max-width: 605px) {
+  .section-1 {
+    height: 15vh;
+  }
+  .nav-link {
+    margin: 0.2rem;
+    font-size: 1.1rem;
+  }
+  .nav-list,
+  .nav-list:last-child {
+    padding: 0;
+    margin: 0;
+  }
+
+  .section-2 {
+    height: 85vh;
+    flex-direction: column;
+    flex-flow: column-reverse;
+  }
+  .section-3 {
+    height: 100%;
+  }
+  .breif-heading {
+    font-size: 1.8rem;
+  }
+  .image-cont-2 {
+    width: 90%;
+  }
+  .about-me-bar,
+  .skills,
+  .projects {
+    width: 70%;
+    height: 3rem;
+  }
+  .about-me-heading,
+  .skills-heading,
+  .projects-heading {
+    font-size: 2.5rem;
+  }
+  .about-me-paragraph {
+    width: 95%;
+    letter-spacing: 0;
+    font-size: 1rem;
+  }
+  .about-me-btn {
+    padding: 0.5rem;
+  }
+  .skills-container {
+    width: 70%;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    padding-top: 1.5rem;
+  }
+  .section-4,
+  .section-5 {
+    height: 100%;
+  }
+  .projects-container {
+    transform: translateY(-2%);
+    grid-gap: 0.5rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+}
