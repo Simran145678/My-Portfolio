@@ -406,6 +406,7 @@ span {
   width: 100%;
   height: 100%;
   padding-top: 2rem;
+  margin-bottom: 6rem;
 }
 
 .projects {
@@ -422,13 +423,14 @@ span {
 .projects-container {
   width: 90%;
   padding: 2rem;
+
   margin-left: auto;
   margin-right: auto;
   background-color: #461220;
   transform: translateY(-5%);
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  grid-gap: 4rem;
+  grid-gap: 2rem;
 }
 
 .project-link {
@@ -441,13 +443,10 @@ span {
   transition: all 0.5s;
   position: relative;
 }
-.project-img-4 {
-  background-color: #fff;
-  cursor: progress;
-}
+
 .project-link {
   position: relative;
-  cursor: pointer;
+
   height: 100%;
   transition: all 0.3s ease-in-out;
 }
@@ -456,7 +455,10 @@ span {
   filter: blur(0.5rem);
   opacity: 0.5;
 }
-
+.project-img-4 {
+  background-color: #fff;
+  cursor: progress;
+}
 .project-name {
   position: absolute;
   left: 0.5%;
@@ -483,20 +485,9 @@ span {
   color: #ffe5ec;
   transition: opacity 0.3s;
 }
-
-/* .project-link::after {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 0.1rem;
-  top: 22%;
-  background-color: #ffe5ec;
-  transition: width 0.5s;
-} */
-
-/* .project-link:hover::after {
-  width: 100%;
-} */
+.project-wrap {
+  margin-bottom: 4rem;
+}
 .project-link:hover .project-name {
   width: 100%;
   transition: width 1s 0.5s;
@@ -505,6 +496,25 @@ span {
   opacity: 1;
   visibility: visible;
   transition: opacity 1s 1s;
+}
+.buttons {
+  display: flex;
+  padding-top: 0.3rem;
+  justify-content: space-between;
+}
+.project-button {
+  outline: 0.1rem solid #461220;
+  color: #461220;
+  padding: 0.2rem;
+  background-color: #ffe5ec;
+  border: none;
+  transition: all 0.3s;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+.project-button:hover {
+  background-color: #461220;
+  color: #ffe5ec;
 }
 /* End of Projects */
 /* Footer */

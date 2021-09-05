@@ -46,7 +46,7 @@ a {
 }
 .image {
   margin-top: 4rem;
-  width: 45%;
+  width: 30vw;
   height: 100%;
   float: left;
   object-fit: cover;
@@ -60,7 +60,8 @@ a {
 }
 .cv-list {
   list-style-type: none;
-  padding-bottom: 4rem;
+  margin-top: 0;
+  padding-top: 0;
 }
 .skills-list-item {
   width: 50%;
@@ -80,11 +81,15 @@ span {
   font-size: 1.5rem;
 }
 .paragraph-container-cv {
+  padding-left: 2rem;
+}
+.cv-long-paragraph {
   padding: 2rem;
+  margin: auto;
+  width: 60%;
 }
 .cv-list-item,
-.cv-h3,
-.cv-paragraph {
+.cv-h3 {
   width: 70%;
 
   padding: 0.3rem;
@@ -93,14 +98,19 @@ span {
   text-align: left;
 }
 .cv-h3 {
-  padding-top: 3rem;
-  font-size: 1.5rem;
+  padding-top: 1rem;
+  font-size: 1.6rem;
 }
 .cv-list-item {
   width: 100%;
 }
 .cv-paragraph {
   margin-bottom: 2rem;
+  text-align: left;
+
+  padding: 0.3rem;
+  letter-spacing: 0.1rem;
+  font-size: 1.2rem;
 }
 .last-line {
   background-color: #461220;
